@@ -12,4 +12,4 @@
         name: daarktangent/calculatorusingdevops
         source: pull
     - name: create web container
-      shell: docker run -d -p 8085:8085 --name calculator daarktangent/calculatorusingdevops:latest
+      shell: docker run -d -p 8080:8080 --name calculator daarktangent/calculatorusingdevops:latest
