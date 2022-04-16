@@ -14,6 +14,7 @@ import java.util.Map;
 
 @RestController
 public class Calculator {
+
     private static final Logger logger = LogManager.getLogger("Calculator");
 
     @RequestMapping(value = "/sqrt",method = RequestMethod.POST)
