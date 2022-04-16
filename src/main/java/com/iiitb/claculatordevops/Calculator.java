@@ -1,6 +1,7 @@
 package com.iiitb.claculatordevops;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,6 +25,11 @@ public class Calculator {
         res = Math.sqrt(input1);
         logger.info("SQUARE_ROOT - Input:" + input1 + " - Output:" + res);
         return res  ;
+    }
+    @GetMapping("test")
+    public String test()
+    {
+    	return "test";
     }
     @RequestMapping(value = "/log",method = RequestMethod.POST)
     public double log(@RequestBody Map<String,Object> payload){

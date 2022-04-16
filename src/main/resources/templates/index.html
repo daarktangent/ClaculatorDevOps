@@ -1,71 +1,76 @@
-<script>
-    var base = "http://172.16.130.28:8080"
-    async function power() {
-        const Input1 = document.getElementById("num1").value;
-        const Input2 = document.getElementById("num2").value;
-        console.log(Input1);
-        console.log(Input2);
-        fetch(base+'/power', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify({
-                input1:Input1,
-                input2:Input2
-            })
-        }).then(response => response.json())
-            .then((data) => {
-                document.getElementById("output").value = data
-            });
-    }
-
-    async function sqrt() {
-        const Input1 = document.getElementById("num1").value;
-        fetch(base+'/sqrt', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify({
-                input1:Input1,
-
-            })
-        }).then(response => response.json())
-            .then((data) => {
-                document.getElementById("output").value = data;
-            });
-    }
-    async function log() {
-        const Input1 = document.getElementById("num1").value;
-        fetch(base+'/log', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify({
-                input1:Input1,
-            })
-        }).then(response => response.json())
-            .then((data) => {
-                document.getElementById("output").value = data;
-            });
-    }
-    async function fact() {
-        const Input1 = document.getElementById("num1").value;
-        fetch(base+'/fact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify({
-                input1:Input1,
-            })
-        }).then(response => response.json())
-            .then((data) => {
-                document.getElementById("output").value = data;
-            });
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Wd</title>
+   	<script>
+	    var base = "http://172.16.130.28:8080"
+	    async function power() {
+	        const Input1 = document.getElementById("num1").value;
+	        const Input2 = document.getElementById("num2").value;
+	        console.log(Input1);
+	        console.log(Input2);
+	        fetch(base+'/power', {
+	            method: 'POST',
+	            headers: {
+	                'Content-Type': 'application/json;charset=utf-8'
+	            },
+	            body: JSON.stringify({
+	                input1:Input1,
+	                input2:Input2
+	            })
+	        }).then(response => response.json())
+	            .then((data) => {
+	                document.getElementById("output").value = data
+	            });
+	    }
+	
+	    async function sqrt() {
+	        const Input1 = document.getElementById("num1").value;
+	        fetch(base+'/sqrt', {
+	            method: 'POST',
+	            headers: {
+	                'Content-Type': 'application/json;charset=utf-8'
+	            },
+	            body: JSON.stringify({
+	                input1:Input1,
+	
+	            })
+	        }).then(response => response.json())
+	            .then((data) => {
+	                document.getElementById("output").value = data;
+	            });
+	    }
+	    async function log() {
+	        const Input1 = document.getElementById("num1").value;
+	        fetch(base+'/log', {
+	            method: 'POST',
+	            headers: {
+	                'Content-Type': 'application/json;charset=utf-8'
+	            },
+	            body: JSON.stringify({
+	                input1:Input1,
+	            })
+	        }).then(response => response.json())
+	            .then((data) => {
+	                document.getElementById("output").value = data;
+	            });
+	    }
+	    async function fact() {
+	        const Input1 = document.getElementById("num1").value;
+	        fetch(base+'/fact', {
+	            method: 'POST',
+	            headers: {
+	                'Content-Type': 'application/json;charset=utf-8'
+	            },
+	            body: JSON.stringify({
+	                input1:Input1,
+	            })
+	        }).then(response => response.json())
+	            .then((data) => {
+	                document.getElementById("output").value = data;
+	            });
+	    }
 </script>
 <style>
     @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
@@ -258,18 +263,13 @@
         transform: scale(1.5);
     }
 </style>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello Wd</title>
 </head>
 
 <body>
 <div class="container">
     <div class="screen">
         <div class="screen__content">
-            <form class="login">
+            
                 <div class="login__field">
                     <i class="login__icon fas fa-user"></i>
                     <input type="number" id="num1" class="login__input" placeholder="input 1">
@@ -283,11 +283,11 @@
                     <input type="number" id="output" class="login__input" placeholder="output">
                 </div>
 
-                <button type="button" class ="button">Power</button>
-                <button type="button" class ="button">Factorial</button>
-                <button type="button" class ="button">SquareRoot</button>
-                <button type="button" class ="button">Log</button>
-            </form>
+                <button id="sqrt"  onclick="sqrt()" class ="button">SQUARE ROOT</button>
+                <button id="power"  onclick="power()" class ="button">POWER</button>
+                <button id="log"  onclick="log()" class ="button">LOGARITHM</button>
+                <button id="fact"  onclick="fact()" class ="button">FACTORIAL</button>
+         
         </div>
         <div class="screen__background">
             <span class="screen__background__shape screen__background__shape4"></span>
