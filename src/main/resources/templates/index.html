@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello Wd</title>
+    <title>Calculator</title>
    	<script>
-	    var base = "http://172.16.130.28:8080"
+	    //let base = "http://172.16.130.28:8080"
+	    let base  = "http://localhost:8080"
 	    async function power() {
 	        const Input1 = document.getElementById("num1").value;
 	        const Input2 = document.getElementById("num2").value;
@@ -24,10 +25,9 @@
 	                document.getElementById("output").value = data
 	            });
 	    }
-	
-	    async function sqrt() {
+	    async function squareroot() {
 	        const Input1 = document.getElementById("num1").value;
-	        fetch(base+'/sqrt', {
+	        fetch(base+'/squareroot', {
 	            method: 'POST',
 	            headers: {
 	                'Content-Type': 'application/json;charset=utf-8'
@@ -56,9 +56,9 @@
 	                document.getElementById("output").value = data;
 	            });
 	    }
-	    async function fact() {
+	    async function factorial() {
 	        const Input1 = document.getElementById("num1").value;
-	        fetch(base+'/fact', {
+	        fetch(base+'/factorial', {
 	            method: 'POST',
 	            headers: {
 	                'Content-Type': 'application/json;charset=utf-8'
@@ -140,35 +140,12 @@
         background: #FFF;
         top: -50px;
         right: 120px;
-        border-radius: 0 72px 0 0;
+        
     }
 
-    .screen__background__shape2 {
-        height: 220px;
-        width: 220px;
-        background: #6C63AC;
-        top: -172px;
-        right: 0;
-        border-radius: 32px;
-    }
 
-    .screen__background__shape3 {
-        height: 540px;
-        width: 190px;
-        background: linear-gradient(270deg, #5D54A4, #6A679E);
-        top: -24px;
-        right: 0;
-        border-radius: 32px;
-    }
 
-    .screen__background__shape4 {
-        height: 400px;
-        width: 200px;
-        background: #7E7BB9;
-        top: 420px;
-        right: 50px;
-        border-radius: 60px;
-    }
+
 
     .login {
         width: 320px;
@@ -223,13 +200,6 @@
         transition: .2s;
     }
 
-    .login__submit:active,
-    .login__submit:focus,
-    .login__submit:hover {
-        border-color: #6A679E;
-        outline: none;
-    }
-
     .button__icon {
         font-size: 24px;
         margin-left: auto;
@@ -271,28 +241,24 @@
         <div class="screen__content">
             
                 <div class="login__field">
-                    <i class="login__icon fas fa-user"></i>
+                 
                     <input type="number" id="num1" class="login__input" placeholder="input 1">
                 </div>
                 <div class="login__field">
-                    <i class="login__icon fas fa-lock"></i>
                     <input type="number" id="num2" class="login__input" placeholder="input 2">
                 </div>
                 <div class="login__field">
-                    <i class="login__icon fas fa-lock"></i>
                     <input type="number" id="output" class="login__input" placeholder="output">
                 </div>
 
-                <button id="sqrt"  onclick="sqrt()" class ="button">SQUARE ROOT</button>
+                <button id="sqrt"  onclick="squareroot()" class ="button">SQUARE ROOT</button>
                 <button id="power"  onclick="power()" class ="button">POWER</button>
                 <button id="log"  onclick="log()" class ="button">LOGARITHM</button>
-                <button id="fact"  onclick="fact()" class ="button">FACTORIAL</button>
+                <button id="fact"  onclick="factorial()" class ="button">FACTORIAL</button>
          
         </div>
         <div class="screen__background">
-            <span class="screen__background__shape screen__background__shape4"></span>
-            <span class="screen__background__shape screen__background__shape3"></span>
-            <span class="screen__background__shape screen__background__shape2"></span>
+            
             <span class="screen__background__shape screen__background__shape1"></span>
         </div>
     </div>
