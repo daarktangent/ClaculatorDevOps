@@ -1,1 +1,7 @@
 2022-04-17 01:11:45 [CalculatorController.java] [INFO] CalculatorController squareroot - input1 = 5.0output=2.23606797749979
+2022-04-17 01:35:45 [CalculatorController.java] [INFO] CalculatorController squareroot - input1 = 6.0output=2.449489742783178
+2022-04-17 01:35:49 [CalculatorController.java] [INFO] CalculatorController squareroot - input1 = 8.0output=2.8284271247461903
+2022-04-17 01:35:54 [CalculatorController.java] [INFO] CalculatorController squareroot - input1 = 10.0output=3.1622776601683795
+2022-04-17 01:35:58 [CalculatorController.java] [INFO] CalculatorController power - input1 = 10.0input2=5.0output=100000.0
+2022-04-17 01:35:59 [CalculatorController.java] [INFO] CalculatorController log - input1 = 10.0output=2.303
+2022-04-17 01:36:01 [CalculatorController.java] [INFO] CalculatorController factorial - input1 = 10.0output=3628800.0

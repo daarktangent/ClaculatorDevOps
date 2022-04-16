@@ -1,12 +1,13 @@
 package com.iiitb.claculatordevops;
-
-import static org.junit.Assert.*;
 import org.junit.Test;
+
+import org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static org.junit.Assert.assertEquals;
 
 public class CalculatorControllerTest {
     private static final double DELTA = 1e-15;
