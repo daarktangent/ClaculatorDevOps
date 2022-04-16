@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 public class CalculatorController {
 
-    private static final Logger logger = LogManager.getLogger("Calculator");
+    private static final Logger logger = LogManager.getLogger("CalculatorController");
     @PostMapping("/squareroot")
     public double squareroot(@RequestBody Map<String,Object> data){
         double result;
