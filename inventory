@@ -1,2 +1,2 @@
 [ubuntu18]
-172.16.130.28 ansible_user=darktangent
+172.16.131.227 ansible_user=darktangent
